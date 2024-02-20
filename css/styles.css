@@ -1,10 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "poppins";
+}
+
+
 #wrapper{
+    height: 100vh;
+}
+
+main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: 95%;
+    
+
+}
+
+.indexHeader{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 5%;
+    background-color: #ffffff;
+    color: #0D6EFD;
+    font-size: 100px;
+    padding-left: 2%;
+    
+}
+
+.recapHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 5%;
+    background-color: #ffffff;
+    color: #0D6EFD;
+    font-size: 100px;
+    padding-left: 2%;
+    margin-bottom: 150px;
+    
 }
 
 h1{
@@ -23,4 +65,32 @@ form {
 
 input{
     margin-left: 10px;
+}
+
+
+.recapMain
+{
+    padding: 0% 15%;
+    background-color: #0d6dfdc5;
+}
+
+#btnRecap{
+   display: flex;
+   justify-content: center;
+}
+.pRecap{
+    display: flex;
+    color: #0D6EFD;
+    justify-content: center;
+    
+
+}
+
+.recapBody{
+    position: relative;
+}
+
+#badge{
+    position: absolute;
+    right:810px
 }
