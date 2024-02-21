@@ -70,13 +70,17 @@ input{
 
 .recapMain
 {
-    padding: 0% 15%;
+    padding: 0.1% 15%;
     background-color: #0d6dfdc5;
+    text-align: center;
+    justify-content: flex-start;
+    display: flex;
 }
 
 #btnRecap{
    display: flex;
    justify-content: center;
+   /* position: relative; */
 }
 .pRecap{
     display: flex;
@@ -87,10 +91,20 @@ input{
 }
 
 .recapBody{
-    position: relative;
+    /* position: relative; */
+    height: 100vh;
 }
 
 #badge{
-    position: absolute;
-    right:810px
+    position: relative;
+    right:826px
+}
+
+.recapMain p{
+    font-size: 50px;
+    padding-top: 2%;
+}
+
+.table {
+    padding: 10%;
 }

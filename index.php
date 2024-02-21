@@ -23,9 +23,14 @@ session_start();
             Panier
             </a>    
             <span class="position-absolute top-10 start-60 translate-middle badge rounded-pill bg-danger">
-                <?php
-                    echo isset($_SESSION['products']) ? count($_SESSION['products']) :0 ;
-                ?>
+            <?php
+            if (isset($_SESSION['products'])) {
+                $totalProduct = 0;
+                foreach($_SESSION['products'] as $index => $product) { // Sinon calcul le nombre de produit
+                    $totalProduct += $product['qtt'];
+            }}
+            echo $totalProduct;
+            ?>
                 <span class="visually-hidden">unread messages</span>
             </span>
         </button>
@@ -41,7 +46,7 @@ session_start();
                 <p>
                     <label>
                         Prix du produit en € :
-                        <input class="form-control" type="number" placeholder="Prix" name="price">
+                        <input class="form-control" step="any" type="number" placeholder="Prix" name="price">
                     </label>
                 </p>
                 <p>
@@ -54,6 +59,7 @@ session_start();
             </form>
             
                 <?php
+                    // Affiche les messages de succès ou d'erreur
                     if (isset($_SESSION['success_message'])) {
                         
                         echo $_SESSION['success_message'] ;
